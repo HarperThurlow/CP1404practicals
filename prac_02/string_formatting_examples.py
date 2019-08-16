@@ -28,7 +28,6 @@ for i in range(len(numbers)):
 for i, number in enumerate(numbers):
     print("Number {0} is {1:>5}".format(i + 1, number))
 
-# TODO: Using a for loop with the range function and string formatting,
 # produce the following output:
 #   0
 #  50

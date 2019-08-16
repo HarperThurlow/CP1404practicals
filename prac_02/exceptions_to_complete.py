@@ -7,9 +7,8 @@ finished = False
 result = 0
 while not finished:
     try:
-        # TODO: this line
         result = int(input("Please enter an integer >"))
         finished = True
-    except ValueError:  # TODO - add something after except
+    except ValueError:
         print("Please enter a valid integer.")
 print("Valid result is:", result)
