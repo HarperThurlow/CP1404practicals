@@ -11,14 +11,13 @@ def main():
 
 
 def determine_score(score):
-    result = ""
     if score < 0 or score > 100:
         result = "Invalid score"
     elif score >= 90:
         result = "Excellent"
     elif score >= 50:
         result = "Passable"
-    elif score < 50:
+    else:
         result = "bad"
 
     return result
