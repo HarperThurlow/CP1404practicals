@@ -17,6 +17,8 @@ def main():
         quick_pick = []
         for i in range(MAX_PICKS):
             number = randint(MIN_NUMBER, MAX_NUMBER)
+            while number in quick_pick:
+                number = randint(MIN_NUMBER, MAX_NUMBER)
             quick_pick.append(number)
         quick_pick.sort()
 
