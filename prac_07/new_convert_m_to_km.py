@@ -12,14 +12,21 @@ class MilesToKilometerApp(App):
         return self.root
 
     def convert_calc(self):
-        value = float(self.root.ids.input_number.text)
+        value = self.handle_valid_input()
         result = value * CONVERSION
         self.root.ids.output_value.text = str(result)
 
     def handle_increment(self, change):
 
-        value = float(self.root.ids.input_number.text) + change
+        value = self.handle_valid_input() + change
         self.root.ids.input_number.text = str(value)
+
+    def handle_valid_input(self):
+        try:
+            number = float(self.root.ids.input_number.text)
+            return number
+        except ValueError:
+            return 0
 
 
 MilesToKilometerApp().run()
