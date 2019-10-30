@@ -73,7 +73,6 @@ def get_fixed_filename(filename):
 
         previous_character = character
 
-
     saved_string += ".txt"
     return saved_string
 
