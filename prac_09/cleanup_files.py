@@ -56,7 +56,7 @@ def get_fixed_filename(filename):
         elif previous_character.isupper() and character.isupper():
             saved_string += "_"
 
-        elif character == "_" or character.isspace():
+        elif character.isspace():
             saved_string += "_"
 
         elif character.islower() and saved_string[-1] == "_":
@@ -93,7 +93,7 @@ def demo_walk():
             for filename in filenames:
                 old_name = os.path.join(directory_name, filename)
                 new_name = os.path.join(directory_name, get_fixed_filename(filename))
-                # os.rename(old_name, new_name)
+                os.rename(old_name, new_name)
         except FileExistsError:
             pass
 
